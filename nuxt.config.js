@@ -39,6 +39,22 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: "AIzaSyDjzfhmuVbyOfsML-KkLelStEt-HLW3Uf4",
+          authDomain: "test-app-c2c27.firebaseapp.com",
+          projectId: "test-app-c2c27",
+          storageBucket: "test-app-c2c27.appspot.com",
+          messagingSenderId: "837809976748",
+          appId: "1:837809976748:web:4e093e6e075f5d05d8b609"
+        },
+        services: {
+          auth: true // Just as example. Can be any other service.
+        }
+      }
+    ]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
