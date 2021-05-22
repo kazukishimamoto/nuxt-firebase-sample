@@ -5,22 +5,25 @@
       <h1 class="title">
         webapp
       </h1>
+      <div v-if="user">
+        <img :src="icon" alt="ユーザーのアイコン" style="border-radius: 50px; display: inline;">
+        <span>{{ user.displayName }}</span>
+        <span>{{ user.email }}</span>
+      </div>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
+          @click="login"
         >
-          GitHub
+          Login
+        </a>
+        <a
+          rel="noopener noreferrer"
+          class="button--grey"
+          @click="logout"
+        >
+          Logout
         </a>
       </div>
     </div>
@@ -28,7 +31,66 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      user: null
+    }
+  },
+  computed: {
+    icon() {
+      return this.user?.photoURL
+    }
+  },
+  mounted() {
+    this.$fire.auth.onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        this.user = user
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
+  },
+  methods: {
+    login() {
+      var provider = new this.$fireModule.auth.GoogleAuthProvider();
+
+      this.$fire.auth.signInWithPopup(provider)
+        .then((result) => {
+          /** @type {firebase.auth.OAuthCredential} */
+          var credential = result.credential;
+
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          var token = credential.accessToken;
+          // The signed-in user info.
+          this.user = result.user;
+          // ...
+        }).catch((error) => {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // The email of the user's account used.
+          var email = error.email;
+          // The firebase.auth.AuthCredential type that was used.
+          var credential = error.credential;
+          // ...
+        });
+    },
+    logout() {
+      this.$fire.auth.signOut().then(() => {
+        // Sign-out successful.
+        this.user = null
+        console.log('logoutしました')
+      }).catch((error) => {
+        // An error happened.
+      });
+    }
+  }
+}
 </script>
 
 <style>
