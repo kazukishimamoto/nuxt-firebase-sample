@@ -1,0 +1,54 @@
+{
+	"analytics-uuid": "83bd5655-b388-4e9f-9a9d-9a7b0c1a38c1",
+	"motd": {
+		"cloudBuildErrorAfter": 1594252800000,
+		"cloudBuildWarnAfter": 1590019200000,
+		"defaultNode10After": 1594252800000,
+		"minVersion": "3.0.5",
+		"node8DeploysDisabledAfter": 1613390400000,
+		"node8RuntimeDisabledAfter": 1615809600000,
+		"node8WarnAfter": 1600128000000,
+		"fetched": 1623365114487
+	},
+	"usage": true,
+	"user": {
+		"iss": "accounts.google.com",
+		"azp": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"aud": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"sub": "116690839797848644784",
+		"email": "jakky0529@gmail.com",
+		"email_verified": true,
+		"at_hash": "cykuQldGeVSVt7GCXRBExw",
+		"iat": 1621700147,
+		"exp": 1621703747
+	},
+	"tokens": {
+		"expires_at": 1623368713232,
+		"refresh_token": "1//0e6_s3A-pSWwHCgYIARAAGA4SNwF-L9IrvGhMc7JSAiYxtvEUV4FOsEjadKLl174mez698XHZX4RIazf28qYiq4H29nn5ui-2yqM",
+		"scopes": [],
+		"access_token": "ya29.a0AfH6SMB64JzvQ2fXPBrbj6ziqqDMj-2Slq9PP6_BnPdFmI6YorOkdFk_KBM4FUd6TmyjNgloaQz1vdrlKH6Ch4ZQJJHmHQLemSIMP4e4Tbg74RvALyUwhCqcvWlXW-_IkdBd6ZS9AEuZurYDELJop6K-v7r0epS4doVtCA",
+		"expires_in": 3599,
+		"scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid https://www.googleapis.com/auth/cloud-platform",
+		"token_type": "Bearer",
+		"id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjZhMWQyNmQ5OTJiZTdhNGI2ODliZGNlMTkxMWY0ZTlhZGM3NWQ5ZjEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTE2NjkwODM5Nzk3ODQ4NjQ0Nzg0IiwiZW1haWwiOiJqYWtreTA1MjlAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI4ZEs1UllhT2pCUFp6MklkTXVRcmVRIiwiaWF0IjoxNjIzMzY1MTE0LCJleHAiOjE2MjMzNjg3MTR9.fQVBg7RJNv2a-JdG2IjnaWrS_Gl5yBu1yTijwlpTK2LxJemZAj4wjTwiB1TTrDLRGaSxDQSqE8mtMKGQ2Ag4ZB8vpwZ91kK3DTeaavR1T1ODxHUY_Lpg6kLq8TUze_0c17_TD8gcGLO2eQnRYinsJHhXZW12po2PWy0zPMa6ydxEhve_hDpj2S2juayeD9-uhJXSmBHHB5i6PjZ7aDB3gHWuZFgos-531etAgyBBdVpYaORpVAzKJP1hvlDNRiyrRTjqoYPmOmmhIyf4D_6xKk86pTVyZjvwd-7vjAbC3qkAGydjgfKqbTiWX5xyrtbeCpmza5YJLbcSfML37dh1Ag"
+	},
+	"activeProjects": {
+		"/Users/kazuki.shimamoto/Workspace/nuxt-firebase-sample/handson-test": "test-app-c2c27"
+	},
+	"adminsdkconfig": {
+		"test-app-c2c27": {
+			"projectId": "test-app-c2c27",
+			"storageBucket": "test-app-c2c27.appspot.com"
+		}
+	},
+	"webconfig": {
+		"test-app-c2c27": {
+			"projectId": "test-app-c2c27",
+			"appId": "1:837809976748:web:4e093e6e075f5d05d8b609",
+			"storageBucket": "test-app-c2c27.appspot.com",
+			"apiKey": "AIzaSyDjzfhmuVbyOfsML-KkLelStEt-HLW3Uf4",
+			"authDomain": "test-app-c2c27.firebaseapp.com",
+			"messagingSenderId": "837809976748"
+		}
+	}
+}

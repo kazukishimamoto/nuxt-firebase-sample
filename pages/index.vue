@@ -43,6 +43,7 @@ export default {
     }
   },
   mounted() {
+    this.$fire.auth.useEmulator("http://localhost:9099");
     this.$fire.auth.onAuthStateChanged((user) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
