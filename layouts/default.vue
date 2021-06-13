@@ -1,5 +1,12 @@
 <template>
   <div>
+    <header>
+      <div>
+        <h1 style="border-radius: 50px; display: inline;">
+          <a href="/">My App</a>
+        </h1>
+      </div>
+    </header>
     <Nuxt />
   </div>
 </template>
@@ -58,5 +65,13 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+header {
+  background-color: gray;
+}
+
+user-prof {
+  display: inline;
 }
 </style>
