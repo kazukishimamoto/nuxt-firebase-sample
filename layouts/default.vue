@@ -5,9 +5,6 @@
         <h1 style="border-radius: 50px; display: inline;">
           <a href="/">My App</a>
         </h1>
-        <img :src="icon" alt="ユーザーのアイコン">
-        <span>Name</span>
-        <span>User</span>
       </div>
     </header>
     <Nuxt />
