@@ -13,14 +13,6 @@
         >
           My Page へ
         </a>
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
       </div>
     </div>
   </div>
