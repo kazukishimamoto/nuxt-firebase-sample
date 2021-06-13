@@ -1,5 +1,5 @@
 <template>
-  <div class="myself">
+  <div class="myself" v-if="user">
     <table cellspacing="20">
       <tr>
         <td><img src="@/static/myself.jpeg" alt="kazuki profile picture"></td>
@@ -114,7 +114,19 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      user: null
+    }
+  },
+  mounted() {
+    this.$fire.auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.user = user
+      } else {
+      }
+    });
+  }
 }
 </script>
 
