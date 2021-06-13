@@ -11,23 +11,72 @@
           rel="noopener noreferrer"
           class="button--green"
         >
-          My Page へ
+          My Page
         </a>
         <a
-          href="https://nuxtjs.org/"
-          target="_blank"
           rel="noopener noreferrer"
           class="button--green"
+          @click="login"
         >
-          Documentation
+          Login
         </a>
+        <a
+          rel="noopener noreferrer"
+          class="button--grey"
+          @click="logout"
+        >
+          Logout
+        </a>
+        <div v-if="user">
+          <img :src="icon" alt="ユーザーのアイコン" style="border-radius: 50px; display: inline;">
+          <span>{{ user.displayName }}</span>
+          <span>{{ user.email }}</span>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      user: null
+    }
+  },
+  computed: {
+    icon() {
+      return this.user?.photoURL
+    }
+  },
+  mounted() {
+    this.$fire.auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.user = user
+      } else {
+      }
+    });
+  },
+  methods: {
+    login() {
+      var provider = new this.$fireModule.auth.GoogleAuthProvider();
+      this.$fire.auth.signInWithPopup(provider)
+        .then((result) => {
+          this.user = result.user;
+        }).catch((error) => {
+        });
+    },
+    logout() {
+      this.$fire.auth.signOut().then(() => {
+        // Sign-out successful.
+        this.user = null
+        console.log('logoutしました')
+      }).catch((error) => {
+        // An error happened.
+      });
+    }
+  }
+}
 </script>
 
 <style>
